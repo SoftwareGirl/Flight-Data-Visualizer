@@ -1,0 +1,18 @@
+Plan: 2 to add, 0 to change, 0 to destroy.
+google_bigquery_dataset.dataset: Creating...
+google_storage_bucket.data-lake-bucket: Creating...
+╷
+│ Error: googleapi: Error 403: The billing account for the owning project is disabled in state absent, accountDisabled
+│ 
+│   with google_storage_bucket.data-lake-bucket,
+│   on main.tf line 22, in resource "google_storage_bucket" "data-lake-bucket":
+│   22: resource "google_storage_bucket" "data-lake-bucket" {
+│ 
+╵
+╷
+│ Error: Error creating Dataset: googleapi: Error 400: Invalid dataset ID "ue-assignment-". Dataset IDs must be alphanumeric (plus underscores) and must be at most 1024 characters long., invalid
+│ 
+│   with google_bigquery_dataset.dataset,
+│   on main.tf line 48, in resource "google_bigquery_dataset" "dataset":
+│   48: resource "google_bigquery_dataset" "dataset" {
+│ 
